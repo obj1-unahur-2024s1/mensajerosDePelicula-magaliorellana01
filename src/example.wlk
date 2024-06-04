@@ -2,7 +2,7 @@ import destinos.*
 import empresamensajeria.*
 
 object roberto{
-	var peso
+	var peso = 50
 	var property acoplado
 	
 	method peso(){
@@ -21,6 +21,9 @@ object roberto{
 		return false
 	}
 	
+	method puedePasar(){
+		return puente.dejaPasar(self) or matrix.dejaPasar(self)
+	}
 	
 }
 
@@ -34,19 +37,49 @@ object norris{
     method peso(){
 		return peso
 	}
+	method puedePasar(){
+		return puente.dejaPasar(self) or matrix.dejaPasar(self)
+	}
 }
 
 
 
 object neo {
     const peso = 0
-    var tieneCredito = true
-    method viajaEnBici(){}
-    method viajaEnCamion(){}
+    var property tieneCredito = true
+    method viajaEnBici(){
+    	
+    }
+    method viajaEnCamion(){
+    	
+    }
     method puedeLlamar(){
-        return if(tieneCredito){true} else false
+    	return
+         if(tieneCredito){
+         	 tieneCredito
+         } else false
     }
     method peso(){
 		return peso
+	}
+	method puedePasar(){
+		return puente.dejaPasar(self) or matrix.dejaPasar(self)
+	}
+	
+	
+}
+
+object nuevoMensajero{
+	const peso = 80
+    method viajaEnBici(){}
+    method viajaEnCamion(){}
+    method puedeLlamar(){
+        return true 
+    }
+    method peso(){
+		return peso
+	}
+	method puedePasar(){
+		return puente.dejaPasar(self) or matrix.dejaPasar(self)
 	}
 }

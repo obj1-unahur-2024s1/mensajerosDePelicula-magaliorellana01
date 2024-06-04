@@ -1,8 +1,26 @@
 import example.*
 import destinos.*
+import paquetes.*
 
 object empresaMensajeria{
-	var mensajeros = []
+	const mensajeros = []
+	const destino = []
+	const paquetesPendientes = []
+    const paquetesEnviados =[]
+    
+     method paquetesPendientes(){
+    	return paquetesPendientes
+    }
+    method paquetesEnviados(){
+    	return paquetesEnviados
+    }
+    method agregarPaquetePendiente(unPaquete){
+    	return paquetesPendientes.add(unPaquete)
+    }
+    method agregarPaqueteEnviados(unPaquete){
+    	return paquetesEnviados.add(unPaquete)
+    }
+    
 	method contratarMensajero(mensajero){
 		return mensajeros.add(mensajero)
 	}
@@ -26,6 +44,42 @@ object empresaMensajeria{
 	method pesoUltimoMensajero(){
 		return mensajeros.last().peso()
 	}
+	
+	method puedeSerEntregado(){
+		return mensajeros.any({m => m.puedePasar()})
+	}
+	
+	method puedeLlevarUnPaqueteDado(){
+		return mensajeros.filter({m => m.puedePasar()})
+	}
+	
+	method tieneSobrepeso(){
+		return mensajeros.sum({m => m.peso()}) > 500
+	}
+	
+	
+ 
+	method enviarPaquete(unPaquete){
+		return
+        if(self.puedeSerEntregado()){
+            self.agregarPaqueteEnviados(unPaquete)
+        }
+        else{
+            self.agregarPaquetePendiente(unPaquete)
+        }
+    }
+    
+    method totalGanadoPaquetesEnviados(){
+    	return paquetesEnviados.sum({paquete => paquete.precio()}) 
+    }
+    
+    method enviarTodosLosPaquetes(paquetes){
+    	return paquetesEnviados.addAll(paquetes.asSet())
+    }
+    
+    method enviarPaqueteMasCaro(){
+    	return self.enviarPaquete(paquetesPendientes.max({paquete => paquete.precio()}))
+    }
 	
 	
 }

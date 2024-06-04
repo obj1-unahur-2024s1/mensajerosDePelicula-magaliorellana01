@@ -76,20 +76,28 @@ Se necesita:
 1. Averiguar si un paquete puede ser entregado por la empresa de 
 mensajería, es decir, si al menos uno de sus mensajeros puede entregar 
 el paquete.
-2. Obtener todos los mensajeros que pueden llevar un paquete dado. 
-3. Saber si una mensajería tiene sobrepeso. Esto sucede si el promedio 
+2. Obtener todos los mensajeros que pueden llevar un paquete 
+dado. 
+3. Saber si una mensajería tiene sobrepeso. Esto sucede si 
+el promedio 
 del peso de los mensajeros es superior a 500 Kg. 
-4. Hacer que la empresa de mensajería envíe un paquete. Para ello elige
- cualquier mensajero entre los que pueden enviarlo y si no puede lo agrega
+4. Hacer que la empresa de mensajería envíe un paquete.
+ Para ello elige
+ cualquier mensajero entre los que pueden enviarlo y si 
+ no puede lo agrega
   a los paquetes pendientes. (leer también punto siguiente)
-5. Conocer la facturación de la empresa, que es el total ganado por los
+5. Conocer la facturación de la empresa, que es el total 
+ganado por los
  paquetes enviados.
 6. Dado un conjunto de paquetes, enviarlos a todos.
-7. Encontrar el paquete pendiente más caro y enviarlo, actualizando
+7. Encontrar el paquete pendiente más caro y enviarlo,
+ actualizando
  los pendientes en caso de haberlo podido enviar.
-8. Cada punto debe tener mínimo un test que demuestren su correcto
+8. Cada punto debe tener mínimo un test que demuestren
+ su correcto
  funcionamiento.
-9. Agregar un nuevo mensajero y un nuevo paquete y garantizar que 
+9. Agregar un nuevo mensajero y un nuevo paquete y 
+garantizar que 
 todo siga funcionando.
 
 Cada punto debe tener mínimo un test.<br>

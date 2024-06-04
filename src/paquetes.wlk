@@ -64,3 +64,21 @@ object paqueteOriginal {
 		return 50
 	}
 }
+
+object nuevoPaquete{
+	method destinos(){
+		
+	}
+	
+	method puedeSerEnviado(){
+	
+	}
+	
+	method mensajeroQuePuedeLlevar(){
+	
+	}
+	
+	method precio(){
+		return 90
+	}
+}
